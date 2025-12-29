@@ -66,7 +66,7 @@ const ProgramStructure = () => {
                                     <span className="text-2xl font-bold text-brand-dark font-outfit">{sem.title}</span>
                                     <span className="text-gray-400 font-medium">{sem.credits}</span>
                                 </div>
-                                {openSemester === index ? <ChevronUp className="text-brand-blue" /> : <ChevronDown className="text-gray-300" />}
+                                {openSemester === index ? <ChevronUp className="text-brand-dark" /> : <ChevronDown className="text-gray-300" />}
                             </button>
 
                             <AnimatePresence>
@@ -91,9 +91,9 @@ const ProgramStructure = () => {
                                                         <tbody className="divide-y divide-gray-100">
                                                             {sem.courses.map((course, cIdx) => (
                                                                 <tr key={cIdx} className="group">
-                                                                    <td className="py-5 font-bold text-brand-dark group-hover:text-brand-blue transition-colors">{course.name}</td>
+                                                                    <td className="py-5 font-bold text-brand-dark group-hover:text-gray-800 transition-colors">{course.name}</td>
                                                                     <td className="py-5">
-                                                                        <span className="bg-brand-blue/10 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full uppercase">
+                                                                        <span className="bg-gray-100 text-gray-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase">
                                                                             {course.type}
                                                                         </span>
                                                                     </td>

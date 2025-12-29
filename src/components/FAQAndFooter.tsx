@@ -33,7 +33,7 @@ const FAQAndFooter = () => {
                                 <button
                                     key={t}
                                     onClick={() => setActiveTab(t)}
-                                    className={`w-full text-left px-8 py-5 rounded-2xl font-black text-xs uppercase tracking-widest transition-all ${activeTab === t ? "bg-white text-brand-blue shadow-2xl shadow-white/10" : "bg-[#1A1A1A] text-gray-500 hover:text-gray-300 border border-transparent hover:border-white/5"}`}
+                                    className={`w-full text-left px-8 py-5 rounded-none font-black text-xs uppercase tracking-widest transition-all ${activeTab === t ? "bg-white text-brand-dark shadow-2xl shadow-white/10" : "bg-[#1A1A1A] text-gray-500 hover:text-gray-300 border border-transparent hover:border-white/5"}`}
                                 >
                                     {t}
                                 </button>
@@ -43,7 +43,7 @@ const FAQAndFooter = () => {
                         {/* FAQ Items */}
                         <div className="lg:w-[78%] space-y-4">
                             {faqs.map((f, i) => (
-                                <div key={i} className={`bg-[#121212] rounded-[2rem] p-10 border border-white/5 space-y-8 group hover:border-brand-blue/30 transition-all ${i === 0 ? 'ring-1 ring-brand-blue/20 shadow-2xl shadow-brand-blue/5' : ''}`}>
+                                <div key={i} className={`bg-[#121212] rounded-none p-10 border border-white/5 space-y-8 group hover:border-gray-700/30 transition-all ${i === 0 ? 'ring-1 ring-gray-700/20 shadow-2xl shadow-gray-700/5' : ''}`}>
                                     <div className="flex justify-between items-center group-hover:translate-x-1 transition-transform">
                                         <h4 className="text-2xl font-black text-gray-300 tracking-tight">{f.q}</h4>
                                     </div>
@@ -79,14 +79,14 @@ const FAQAndFooter = () => {
                             {/* Inner Left: Policy Links (8 cols) */}
                             <div className="md:col-span-8 p-12 flex flex-wrap items-center justify-center gap-8 md:gap-12 border-b md:border-b-0 md:border-r border-gray-100">
                                 {["Terms & Conditions", "Privacy Policy", "Refund Policy"].map((link) => (
-                                    <a key={link} href="#" className="font-bold text-gray-500 text-xs hover:text-brand-blue transition-colors whitespace-nowrap">{link}</a>
+                                    <a key={link} href="#" className="font-bold text-gray-500 text-xs hover:text-brand-dark transition-colors whitespace-nowrap">{link}</a>
                                 ))}
                             </div>
 
                             {/* Inner Right: Social Icons (4 cols) */}
                             <div className="md:col-span-4 p-8 flex items-center justify-center gap-4">
                                 {[1, 2, 3].map(i => (
-                                    <div key={i} className="w-10 h-10 bg-gray-100 rounded-lg hover:bg-brand-blue/10 transition-colors cursor-pointer" />
+                                    <div key={i} className="w-10 h-10 bg-gray-100 rounded-none hover:bg-brand-blue/10 transition-colors cursor-pointer" />
                                 ))}
                             </div>
                         </div>
@@ -94,7 +94,7 @@ const FAQAndFooter = () => {
                         {/* Bottom Row: Newsletter */}
                         <div className="p-12 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12">
                             <h4 className="text-3xl font-black font-outfit text-brand-dark tracking-tighter shrink-0">Join Our Newsletter</h4>
-                            <div className="flex-grow max-w-xl w-full flex bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                            <div className="flex-grow max-w-xl w-full flex bg-white border border-gray-200 rounded-none overflow-hidden shadow-sm">
                                 <input
                                     type="email"
                                     placeholder="Enter your email →"

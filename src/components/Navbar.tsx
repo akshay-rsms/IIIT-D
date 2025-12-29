@@ -28,16 +28,16 @@ const Navbar = () => {
                     </Link>
 
                     <div className="hidden md:ml-6 md:flex md:space-x-8">
-                        <Link href="#curriculum" className="text-gray-700 hover:text-brand-blue px-3 py-2 text-sm font-medium transition-colors">
+                        <Link href="#curriculum" className="text-gray-700 hover:text-brand-dark px-3 py-2 text-sm font-medium transition-colors">
                             Curriculum
                         </Link>
-                        <Link href="#about" className="text-gray-700 hover:text-brand-blue px-3 py-2 text-sm font-medium transition-colors">
+                        <Link href="#about" className="text-gray-700 hover:text-brand-dark px-3 py-2 text-sm font-medium transition-colors">
                             About
                         </Link>
-                        <Link href="#pricing" className="text-gray-700 hover:text-brand-blue px-3 py-2 text-sm font-medium transition-colors">
+                        <Link href="#pricing" className="text-gray-700 hover:text-brand-dark px-3 py-2 text-sm font-medium transition-colors">
                             Pricing
                         </Link>
-                        <Link href="#about-iiit" className="text-gray-700 hover:text-brand-blue px-3 py-2 text-sm font-medium transition-colors">
+                        <Link href="#about-iiit" className="text-gray-700 hover:text-brand-dark px-3 py-2 text-sm font-medium transition-colors">
                             About IIIT
                         </Link>
                     </div>
@@ -45,7 +45,7 @@ const Navbar = () => {
                     <div className="flex items-center">
                         <a
                             href="tel:+919900892524"
-                            className="inline-flex items-center px-6 py-2 border border-transparent text-sm font-medium rounded-full shadow-sm text-white bg-brand-blue hover:bg-brand-blue-hover focus:outline-none transition-all gap-2"
+                            className="inline-flex items-center px-6 py-2 border border-transparent text-sm font-medium rounded-none shadow-sm text-white bg-brand-blue hover:bg-brand-blue-hover focus:outline-none transition-all gap-2"
                         >
                             <Phone size={16} />
                             +91 - 9900892524

@@ -30,9 +30,8 @@ const WhyChoose = () => {
                     {/* Content Left */}
                     <div className="lg:w-1/2 space-y-12">
                         <div className="space-y-4">
-                            <h2 className="text-4xl font-bold font-outfit text-brand-dark">
-                                Why Choose <br />
-                                <span className="text-brand-blue">IIIT Dharwad?</span>
+                            <h2 className="text-4xl lg:text-5xl font-bold font-outfit text-brand-dark leading-tight">
+                                Why Choose <span className="font-bold">IIIT Dharwad?</span>
                             </h2>
                             <p className="text-xl text-gray-600 font-medium">
                                 India's Next Frontier for Data Science & AI Education
@@ -42,7 +41,7 @@ const WhyChoose = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
                             {points.map((point, index) => (
                                 <div key={index} className="space-y-3">
-                                    <CheckCircle2 className="text-brand-blue" size={24} />
+                                    <CheckCircle2 className="text-brand-dark" size={24} />
                                     <h4 className="font-bold text-lg text-brand-dark leading-snug">
                                         {point.title}
                                     </h4>
@@ -54,7 +53,7 @@ const WhyChoose = () => {
                         </div>
 
                         <div className="pt-6">
-                            <button className="inline-flex items-center gap-4 bg-brand-blue text-white px-10 py-5 rounded-2xl font-bold text-lg group shadow-xl shadow-brand-blue/20 hover:scale-[1.02] transition-all">
+                            <button className="inline-flex items-center gap-4 bg-brand-blue text-white px-10 py-5 rounded-none font-bold text-lg group shadow-xl shadow-brand-blue/20 hover:scale-[1.02] transition-all">
                                 Apply Now
                                 <span className="group-hover:translate-x-1 transition-transform">→</span>
                             </button>
@@ -65,23 +64,14 @@ const WhyChoose = () => {
                     <div className="lg:w-1/2 relative">
                         <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl">
                             <img
-                                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2000&auto=format&fit=crop"
-                                alt="Student at IIIT"
-                                className="w-full h-auto"
+                                src="/assets/why-choose.png"
+                                alt="Expert at IIIT"
+                                className="w-full h-full object-cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                         </div>
 
-                        {/* Overlay Card */}
-                        <div className="absolute -bottom-10 -right-6 md:right-10 bg-brand-blue text-white p-10 rounded-[2rem] shadow-2xl max-w-[280px]">
-                            <div className="space-y-6">
-                                <div className="text-4xl font-light opacity-60 font-outfit">///T</div>
-                                <div className="space-y-2">
-                                    <p className="text-2xl font-bold leading-tight">Key Highlights →</p>
-                                    <p className="text-sm opacity-80">Explore what makes us unique.</p>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
 
                 </div>

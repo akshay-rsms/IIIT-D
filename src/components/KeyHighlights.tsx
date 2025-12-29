@@ -41,15 +41,15 @@ const KeyHighlights = () => {
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-800/50 border border-gray-800/50 rounded-3xl overflow-hidden">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-800/50 border border-gray-800/50 rounded-none overflow-hidden">
                     {highlights.map((item, index) => (
                         <div
                             key={index}
                             className="bg-[#0D0D0D] p-10 relative group hover:bg-[#111111] transition-colors"
                         >
                             <div className="flex justify-between items-start mb-8">
-                                <div className="p-3 bg-white/5 rounded-xl group-hover:bg-brand-blue/10 transition-colors">
-                                    <item.Icon size={32} className="text-white group-hover:text-brand-blue transition-colors" />
+                                <div className="p-3 bg-white/5 rounded-none group-hover:bg-brand-blue/10 transition-colors">
+                                    <item.Icon size={32} className="text-white transition-colors" />
                                 </div>
                                 <span className="text-gray-600 font-mono text-lg">{item.id}</span>
                             </div>

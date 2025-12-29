@@ -7,7 +7,7 @@ const PricingAndCertificates = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
 
                 {/* Main Fee Card (Black & Blue Split) */}
-                <div className="flex flex-col lg:flex-row rounded-[3.5rem] overflow-hidden shadow-2xl relative">
+                <div className="flex flex-col lg:flex-row rounded-none overflow-hidden shadow-2xl relative">
                     {/* Left Section (Black) */}
                     <div className="lg:w-[40%] bg-[#080808] p-16 flex flex-col justify-between min-h-[500px] relative">
                         <div className="space-y-12">
@@ -22,7 +22,7 @@ const PricingAndCertificates = () => {
                             </div>
                         </div>
 
-                        <div className="bg-[#A3E635] text-black px-8 py-5 rounded-2xl flex items-center justify-between group cursor-pointer hover:bg-white transition-all shadow-xl shadow-[#A3E635]/20">
+                        <div className="bg-[#A3E635] text-black px-8 py-5 rounded-none flex items-center justify-between group cursor-pointer hover:bg-white transition-all shadow-xl shadow-[#A3E635]/20">
                             <div className="space-y-0.5">
                                 <p className="text-[10px] font-black uppercase tracking-tight opacity-70">Emi Starting</p>
                                 <p className="text-2xl font-black tracking-tighter">₹15,400/- <span className="text-sm font-bold opacity-60 ml-1">& More</span></p>
@@ -40,7 +40,7 @@ const PricingAndCertificates = () => {
                             { label: "Pay Yearly", value: "₹1,77,000" },
                             { label: "Pay Total Fee", value: "₹3,54,000" },
                         ].map((fee, idx) => (
-                            <div key={idx} className="bg-white p-10 rounded-3xl flex justify-between items-center group hover:-translate-y-1 transition-all cursor-default shadow-lg shadow-black/5">
+                            <div key={idx} className="bg-white p-10 rounded-none flex justify-between items-center group hover:-translate-y-1 transition-all cursor-default shadow-lg shadow-black/5">
                                 <p className="text-gray-900 font-black text-xl tracking-tight">{fee.label}</p>
                                 <p className="text-gray-900 font-black text-3xl tracking-tighter">{fee.value}</p>
                             </div>
@@ -60,25 +60,19 @@ const PricingAndCertificates = () => {
                 <div className="space-y-24 pt-16">
                     <div className="max-w-4xl mx-auto text-center">
                         <h2 className="text-5xl lg:text-6xl font-black font-outfit text-brand-dark tracking-tight">
-                            Get an <span className="text-brand-blue border-b-8 border-brand-blue/10">Industry Worthy</span> Certificate
+                            Get an Industry Worthy Certificate
                         </h2>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
                         {/* Left: Certificate Preview */}
                         <div className="lg:col-span-7 relative">
-                            <div className="relative p-3 bg-gray-50 rounded-3xl shadow-inner border border-gray-100 rotate-1 scale-[1.02]">
+                            <div className="relative p-3 bg-gray-50 rounded-none shadow-inner border border-gray-100">
                                 <img
-                                    src="https://images.unsplash.com/photo-1589330273594-fade1ee91647?q=80&w=1200"
-                                    alt="Sample Degree Certificate"
-                                    className="w-full h-auto rounded-2xl shadow-[0_32px_128px_-32px_rgba(0,0,0,0.3)] contrast-125 opacity-90"
+                                    src="/assets/mtech-certificate.png"
+                                    alt="M.Tech Degree Certificate"
+                                    className="w-full h-auto rounded-none shadow-[0_32px_128px_-32px_rgba(0,0,0,0.3)]"
                                 />
-                                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                    <p className="text-[10vw] font-black text-black/[0.03] -rotate-12 uppercase tracking-[2em] font-sans">SAMPLE</p>
-                                </div>
-                                <div className="absolute top-8 left-8 p-3 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
-                                    <Logo className="h-8 w-auto" />
-                                </div>
                             </div>
                         </div>
 
@@ -92,14 +86,14 @@ const PricingAndCertificates = () => {
                                 { title: "PG Diploma", desc: "Awarded upon completion of 30 credits, including core and elective courses (if the candidate exits the program after the 2nd semester)." },
                                 { title: "M.Tech Degree", desc: "Awarded upon completion of 60 credits, including the master's thesis and capstone project." },
                             ].map((item, idx) => (
-                                <div key={idx} className="p-10 border border-brand-blue/10 bg-white rounded-2xl relative group hover:bg-brand-blue/5 hover:border-brand-blue/30 transition-all shadow-sm">
+                                <div key={idx} className="p-10 border border-brand-blue/10 bg-white rounded-none relative group hover:bg-brand-blue/5 hover:border-brand-blue/30 transition-all shadow-sm">
                                     {/* Tick icon as seen in design boxes */}
                                     <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-white border border-brand-blue/10 group-hover:border-brand-blue/30 rounded flex items-center justify-center transition-all">
                                         <div className="w-1.5 h-1.5 bg-brand-blue rounded-full opacity-40 group-hover:opacity-100" />
                                     </div>
 
                                     <div className="space-y-2">
-                                        <h4 className="text-2xl font-black text-brand-blue tracking-tighter">{item.title}</h4>
+                                        <h4 className="text-2xl font-black text-brand-dark tracking-tighter">{item.title}</h4>
                                         <p className="text-gray-500 text-xs leading-relaxed font-bold">
                                             {item.desc}
                                         </p>
