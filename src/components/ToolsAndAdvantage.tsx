@@ -105,15 +105,20 @@ const ToolsAndAdvantage = () => {
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
-                        {advantages.map((item, index) => (
-                            <div key={index} className="flex items-center gap-4 p-6 bg-brand-light/50 border border-brand-blue/5 hover:border-brand-blue/20 hover:bg-white hover:shadow-lg transition-all rounded-none group">
-                                <div className="flex-shrink-0">
-                                    <img src="/blue-bulletin.svg" alt="bullet" className="h-6 w-6" />
-                                </div>
-                                <h4 className="text-lg font-bold text-brand-dark group-hover:text-brand-blue transition-colors leading-snug">
-                                    {item.title}
-                                </h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {advantages.map((advantage, index) => (
+                            <div key={index} className="flex flex-col justify-between p-8 bg-gray-50 min-h-[240px] hover:bg-white hover:shadow-xl transition-all duration-300 group">
+                                <span className="text-xs font-mono text-gray-300 tracking-widest font-medium">
+                                    /00{index + 1}
+                                </span>
+
+                                <h3 className="text-xl lg:text-2xl font-normal text-brand-dark leading-tight">
+                                    {advantage.title.split(" ").map((word, i) => (
+                                        <span key={i} className="block">
+                                            {word}
+                                        </span>
+                                    ))}
+                                </h3>
                             </div>
                         ))}
                     </div>

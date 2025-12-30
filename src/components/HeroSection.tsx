@@ -66,16 +66,16 @@ const HeroSection = () => {
                                     placeholder="Phone No."
                                     className="w-full px-4 py-3 rounded-none bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue transition-all text-sm lg:text-base"
                                 />
-                                <select className="w-full px-4 py-3 rounded-none bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue transition-all text-gray-500 text-sm lg:text-base">
-                                    <option disabled selected>City</option>
+                                <select defaultValue="" className="w-full px-4 py-3 rounded-none bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue transition-all text-gray-500 text-sm lg:text-base">
+                                    <option value="" disabled>City</option>
                                     <option>Bangalore</option>
                                     <option>Hyderabad</option>
                                     <option>Mumbai</option>
                                     <option>Delhi</option>
                                 </select>
                             </div>
-                            <select className="w-full px-4 py-3 rounded-none bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue transition-all text-gray-500 text-sm lg:text-base">
-                                <option disabled selected>Work Experience</option>
+                            <select defaultValue="" className="w-full px-4 py-3 rounded-none bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue transition-all text-gray-500 text-sm lg:text-base">
+                                <option value="" disabled>Work Experience</option>
                                 <option>0-2 Years</option>
                                 <option>2-5 Years</option>
                                 <option>5+ Years</option>
