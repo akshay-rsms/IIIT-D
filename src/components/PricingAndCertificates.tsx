@@ -56,11 +56,10 @@ const PricingAndCertificates = () => {
                     </p>
                 </div>
 
-                {/* Bottom Part: Certificate Section */}
                 <div className="space-y-12 lg:space-y-24 pt-12 lg:pt-16">
-                    <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="text-3xl lg:text-6xl font-black font-outfit text-brand-dark tracking-tight">
-                            Get an Industry Worthy Certificate
+                    <div className="w-full text-center">
+                        <h2 className="text-3xl lg:text-6xl font-normal font-outfit text-brand-dark tracking-tight whitespace-nowrap">
+                            Get an <span className="font-bold underline decoration-brand-blue decoration-8 underline-offset-8">Industry Worthy</span> Certificate
                         </h2>
                     </div>
 
@@ -77,26 +76,31 @@ const PricingAndCertificates = () => {
                         </div>
 
                         {/* Right: Path Milestones */}
-                        <div className="lg:col-span-5 relative space-y-4">
-                            {/* Connecting Line Decor */}
-                            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-px h-[60%] bg-brand-blue/20 -ml-8 hidden lg:block" />
+                        <div className="lg:col-span-5 relative flex flex-col gap-6">
+                            {/* Connecting Line - visual only, positioned absolute related to layout if needed, but flex gap works for spacing */}
 
                             {[
                                 { title: "PG Certification", desc: "Awarded upon completion of 15 credits in foundational courses (if the candidate exits the program after the 1st semester)." },
                                 { title: "PG Diploma", desc: "Awarded upon completion of 30 credits, including core and elective courses (if the candidate exits the program after the 2nd semester)." },
                                 { title: "M.Tech Degree", desc: "Awarded upon completion of 60 credits, including the master's thesis and capstone project." },
                             ].map((item, idx) => (
-                                <div key={idx} className="p-10 border border-brand-blue/10 bg-white rounded-none relative group hover:bg-brand-blue/5 hover:border-brand-blue/30 transition-all shadow-sm">
-                                    {/* Tick icon as seen in design boxes */}
-                                    <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-white border border-brand-blue/10 group-hover:border-brand-blue/30 rounded flex items-center justify-center transition-all">
-                                        <div className="w-1.5 h-1.5 bg-brand-blue rounded-full opacity-40 group-hover:opacity-100" />
-                                    </div>
+                                <div key={idx} className="relative pl-8">
+                                    {/* Line connecting the left edge */}
+                                    {idx !== 2 && <div className="absolute left-0 top-8 bottom-[-24px] w-px bg-brand-blue/30" />}
+                                    {/* Line from previous if not first? No, easier to just draw down. */}
 
-                                    <div className="space-y-2">
-                                        <h4 className="text-xl lg:text-2xl font-black text-brand-dark tracking-tighter">{item.title}</h4>
-                                        <p className="text-gray-500 text-[10px] lg:text-xs leading-relaxed font-bold">
-                                            {item.desc}
-                                        </p>
+                                    {/* Card */}
+                                    <div className="bg-white border-2 border-brand-blue p-6 lg:p-8 rounded-none shadow-sm relative z-10">
+
+                                        {/* Connector Line to Box */}
+                                        <div className="absolute top-8 left-0 w-8 h-px bg-brand-blue/30 -translate-x-full" />
+
+                                        <div className="space-y-3">
+                                            <h4 className="text-xl lg:text-2xl font-bold text-brand-blue tracking-tight">{item.title}</h4>
+                                            <p className="text-gray-600 text-[10px] lg:text-xs leading-relaxed font-medium">
+                                                {item.desc}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             ))}

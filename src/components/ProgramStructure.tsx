@@ -66,7 +66,7 @@ const ProgramStructure = () => {
                                     <span className="text-xl lg:text-3xl font-medium text-gray-900">{sem.title}</span>
                                 </div>
                                 <div className="flex items-center gap-4">
-                                    <span className="text-sm lg:text-base text-gray-500 font-medium font-m-plus-1-code">{sem.credits}</span>
+                                    <span className="text-sm lg:text-base text-gray-500 font-medium">{sem.credits}</span>
                                     <div className={`transition-transform duration-300 ${openSemester === index ? 'rotate-180 text-brand-blue' : 'text-brand-blue'}`}>
                                         <div className={`w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] ${openSemester === index ? 'border-b-brand-blue' : 'border-b-brand-blue rotate-180'}`} />
                                     </div>

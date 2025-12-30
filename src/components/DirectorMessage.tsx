@@ -27,7 +27,7 @@ const DirectorMessage = () => {
                 <div className="flex flex-col lg:flex-row border border-gray-100 rounded-none overflow-hidden shadow-sm">
                     {/* Left Side: Text */}
                     <div className="lg:w-[40%] p-8 lg:p-16 flex flex-col justify-between bg-white text-center lg:text-left">
-                        <h2 className="text-3xl lg:text-5xl font-bold font-outfit text-brand-dark leading-tight">
+                        <h2 className="text-3xl lg:text-[48px] font-normal font-outfit text-brand-dark leading-tight">
                             Message <br className="hidden lg:block" /> from the <br className="hidden lg:block" /> Director →
                         </h2>
 

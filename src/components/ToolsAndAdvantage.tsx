@@ -43,7 +43,7 @@ const ToolsAndAdvantage = () => {
 
                         {/* Content */}
                         <div className="space-y-6 lg:space-y-8 relative z-10 flex flex-col items-center text-center">
-                            <h2 className="text-5xl md:text-6xl lg:text-8xl font-bold font-outfit leading-[0.9] tracking-tight">
+                            <h2 className="text-5xl md:text-6xl lg:text-[95px] font-normal font-outfit leading-[0.9] tracking-tight">
                                 Tools <br />
                                 You'll <br />
                                 Master <span className="inline-block transform translate-y-2 ml-4">→</span>
@@ -100,8 +100,8 @@ const ToolsAndAdvantage = () => {
                         <div className="inline-block px-4 py-1.5 bg-gray-50 rounded-none text-gray-500 font-bold text-xs tracking-widest uppercase">
                             READY TO JOIN?
                         </div>
-                        <h2 className="text-3xl lg:text-5xl font-bold font-outfit text-brand-dark">
-                            The IIIT Dharwad Advantage
+                        <h2 className="text-3xl lg:text-5xl font-outfit text-brand-dark">
+                            The <span className="font-bold">IIIT Dharwad</span> Advantage
                         </h2>
                     </div>
 
@@ -119,7 +119,7 @@ const ToolsAndAdvantage = () => {
                     </div>
 
                     <div className="flex flex-col md:flex-row gap-6 items-center justify-center pt-8">
-                        <p className="text-2xl font-bold text-brand-dark font-outfit">Ready to accelerate your career?</p>
+                        <p className="text-[36px] font-normal text-brand-dark font-outfit">Ready to accelerate your career?</p>
                         <div className="flex gap-4">
                             <button className="bg-brand-blue text-white px-8 py-4 rounded-none font-bold hover:shadow-lg hover:shadow-brand-blue/30 transition-all">
                                 Apply Now →
