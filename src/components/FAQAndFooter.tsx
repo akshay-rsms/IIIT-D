@@ -1,7 +1,35 @@
 "use client";
 
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 import Logo from "./Logo";
+
+const FAQItem = ({ question, answer, isOpen = false }: { question: string, answer: string, isOpen: boolean }) => {
+    const [open, setOpen] = useState(isOpen);
+
+    return (
+        <div className={`bg-[#121212] rounded-none border transition-all duration-300 ${open ? 'border-brand-blue/30 bg-[#151515]' : 'border-white/5 hover:border-gray-700/30'}`}>
+            <button
+                onClick={() => setOpen(!open)}
+                className="w-full text-left p-6 lg:p-8 flex justify-between items-center group"
+            >
+                <h4 className={`text-lg lg:text-xl font-black tracking-tight transition-colors ${open ? 'text-white' : 'text-gray-400 group-hover:text-gray-200'}`}>
+                    {question}
+                </h4>
+                <div className={`p-2 rounded-full transition-all duration-300 ${open ? 'bg-brand-blue text-white rotate-180' : 'bg-white/5 text-gray-500 group-hover:text-white group-hover:bg-white/10'}`}>
+                    <ChevronDown size={20} />
+                </div>
+            </button>
+            <div className={`grid transition-all duration-300 ease-in-out ${open ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+                <div className="overflow-hidden">
+                    <div className="p-6 lg:p-8 pt-0 text-gray-400 leading-relaxed font-medium text-sm lg:text-base border-t border-dashed border-white/5">
+                        {answer}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 const FAQAndFooter = () => {
     const [activeTab, setActiveTab] = useState("General Info");
@@ -40,22 +68,10 @@ const FAQAndFooter = () => {
                             ))}
                         </div>
 
-                        {/* FAQ Items */}
+                        {/* FAQ Items (Accordion) */}
                         <div className="lg:w-[78%] space-y-4">
                             {faqs.map((f, i) => (
-                                <div key={i} className={`bg-[#121212] rounded-none p-6 lg:p-10 border border-white/5 space-y-6 lg:space-y-8 group hover:border-gray-700/30 transition-all ${i === 0 ? 'ring-1 ring-gray-700/20 shadow-2xl shadow-gray-700/5' : ''}`}>
-                                    <div className="flex justify-between items-center group-hover:translate-x-1 transition-transform">
-                                        <h4 className="text-xl lg:text-2xl font-black text-gray-300 tracking-tight">{f.q}</h4>
-                                    </div>
-
-                                    {i === 0 && (
-                                        <div className="pt-4 border-t border-white/5">
-                                            <p className="text-gray-500 leading-relaxed text-sm font-bold max-w-3xl">
-                                                {f.a}
-                                            </p>
-                                        </div>
-                                    )}
-                                </div>
+                                <FAQItem key={i} question={f.q} answer={f.a} isOpen={i === 0} />
                             ))}
                         </div>
                     </div>
