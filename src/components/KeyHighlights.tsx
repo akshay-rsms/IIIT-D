@@ -31,12 +31,12 @@ const KeyHighlights = () => {
     ];
 
     return (
-        <section className="py-24 bg-[#0A0A0A] text-white">
+        <section className="py-16 lg:py-24 bg-[#0A0A0A] text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                <div className="mb-16 space-y-4">
-                    <p className="text-gray-500 font-medium tracking-widest uppercase text-sm">/ WHY US</p>
-                    <h2 className="text-4xl md:text-5xl font-bold font-outfit flex items-center gap-4">
+                <div className="mb-12 lg:mb-16 space-y-4 text-center lg:text-left">
+                    <p className="text-gray-500 font-medium tracking-widest uppercase text-xs lg:text-sm">/ WHY US</p>
+                    <h2 className="text-3xl lg:text-5xl font-bold font-outfit flex items-center justify-center lg:justify-start gap-4">
                         Key Highlights <span className="text-gray-400">→</span>
                     </h2>
                 </div>
@@ -45,7 +45,7 @@ const KeyHighlights = () => {
                     {highlights.map((item, index) => (
                         <div
                             key={index}
-                            className="bg-[#0D0D0D] p-10 relative group hover:bg-[#111111] transition-colors"
+                            className="bg-[#0D0D0D] p-8 lg:p-10 relative group hover:bg-[#111111] transition-colors"
                         >
                             <div className="flex justify-between items-start mb-8">
                                 <div className="p-3 bg-white/5 rounded-none group-hover:bg-brand-blue/10 transition-colors">

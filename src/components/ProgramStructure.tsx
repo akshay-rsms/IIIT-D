@@ -26,30 +26,30 @@ const ProgramStructure = () => {
     ];
 
     return (
-        <section className="py-24 bg-brand-light">
+        <section className="py-16 lg:py-24 bg-brand-light">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                <div className="text-center mb-16 space-y-4">
-                    <h2 className="text-4xl md:text-5xl font-bold font-outfit text-brand-dark">
+                <div className="text-center mb-10 lg:mb-16 space-y-4">
+                    <h2 className="text-3xl lg:text-5xl font-bold font-outfit text-brand-dark">
                         M.Tech DSAI Program
                     </h2>
-                    <p className="text-gray-500 font-medium">
+                    <p className="text-gray-500 font-medium text-sm lg:text-base">
                         Data Science & Artificial Intelligence with 5 Specializations
                     </p>
 
-                    <div className="flex justify-center mt-10">
-                        <div className="bg-white p-1 rounded-2xl shadow-sm border border-gray-100 flex gap-1">
+                    <div className="flex justify-center mt-8 lg:mt-10">
+                        <div className="bg-white p-1 rounded-none shadow-sm border border-gray-100 flex gap-1">
                             <button
                                 onClick={() => setActiveTab("structure")}
-                                className={`px-8 py-3 rounded-xl font-bold text-sm transition-all ${activeTab === "structure" ? "bg-brand-blue text-white shadow-md" : "text-gray-500 hover:text-brand-dark"}`}
+                                className={`px-4 lg:px-8 py-3 rounded-none font-bold text-xs lg:text-sm transition-all ${activeTab === "structure" ? "bg-brand-blue text-white shadow-md" : "text-gray-500 hover:text-brand-dark"}`}
                             >
                                 Program Structure
                             </button>
                             <button
                                 onClick={() => setActiveTab("specializations")}
-                                className={`px-8 py-3 rounded-xl font-bold text-sm transition-all flex items-center gap-2 ${activeTab === "specializations" ? "bg-brand-blue text-white shadow-md" : "text-gray-500 hover:text-brand-dark"}`}
+                                className={`px-4 lg:px-8 py-3 rounded-none font-bold text-xs lg:text-sm transition-all flex items-center gap-2 ${activeTab === "specializations" ? "bg-brand-blue text-white shadow-md" : "text-gray-500 hover:text-brand-dark"}`}
                             >
-                                Specializations <span className="text-xs opacity-60">→</span>
+                                Specializations <span className="text-[10px] opacity-60">→</span>
                             </button>
                         </div>
                     </div>
@@ -57,14 +57,14 @@ const ProgramStructure = () => {
 
                 <div className="space-y-4">
                     {semesters.map((sem, index) => (
-                        <div key={index} className="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm">
+                        <div key={index} className="bg-white rounded-none overflow-hidden border border-gray-100 shadow-sm">
                             <button
                                 onClick={() => setOpenSemester(openSemester === index ? null : index)}
-                                className="w-full px-8 py-6 flex justify-between items-center hover:bg-gray-50/50 transition-colors"
+                                className="w-full px-6 lg:px-8 py-4 lg:py-6 flex justify-between items-center hover:bg-gray-50/50 transition-colors"
                             >
-                                <div className="flex items-center gap-6">
-                                    <span className="text-2xl font-bold text-brand-dark font-outfit">{sem.title}</span>
-                                    <span className="text-gray-400 font-medium">{sem.credits}</span>
+                                <div className="flex items-center gap-4 lg:gap-6">
+                                    <span className="text-lg lg:text-2xl font-bold text-brand-dark font-outfit">{sem.title}</span>
+                                    <span className="text-xs lg:text-base text-gray-400 font-medium">{sem.credits}</span>
                                 </div>
                                 {openSemester === index ? <ChevronUp className="text-brand-dark" /> : <ChevronDown className="text-gray-300" />}
                             </button>
@@ -93,7 +93,7 @@ const ProgramStructure = () => {
                                                                 <tr key={cIdx} className="group">
                                                                     <td className="py-5 font-bold text-brand-dark group-hover:text-gray-800 transition-colors">{course.name}</td>
                                                                     <td className="py-5">
-                                                                        <span className="bg-gray-100 text-gray-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase">
+                                                                        <span className="bg-gray-100 text-gray-600 text-[8px] lg:text-[10px] font-bold px-3 py-1 rounded-none uppercase">
                                                                             {course.type}
                                                                         </span>
                                                                     </td>

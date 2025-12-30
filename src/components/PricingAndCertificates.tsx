@@ -3,15 +3,15 @@ import Logo from "./Logo";
 
 const PricingAndCertificates = () => {
     return (
-        <section className="bg-white overflow-hidden py-32">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
+        <section className="bg-white overflow-hidden py-16 lg:py-32">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 lg:space-y-32">
 
                 {/* Main Fee Card (Black & Blue Split) */}
                 <div className="flex flex-col lg:flex-row rounded-none overflow-hidden shadow-2xl relative">
                     {/* Left Section (Black) */}
-                    <div className="lg:w-[40%] bg-[#080808] p-16 flex flex-col justify-between min-h-[500px] relative">
-                        <div className="space-y-12">
-                            <h2 className="text-6xl font-bold font-outfit text-white uppercase leading-tight tracking-tight">Program <br /> Fees</h2>
+                    <div className="lg:w-[40%] bg-[#080808] p-8 lg:p-16 flex flex-col justify-between min-h-[400px] lg:min-h-[500px] relative">
+                        <div className="space-y-10 lg:space-y-12">
+                            <h2 className="text-4xl lg:text-6xl font-bold font-outfit text-white uppercase leading-tight tracking-tight">Program <br /> Fees</h2>
 
                             <div className="space-y-3">
                                 <p className="text-gray-500 text-[10px] font-black uppercase tracking-[0.2em]">Application Fee</p>
@@ -34,15 +34,15 @@ const PricingAndCertificates = () => {
                     </div>
 
                     {/* Right Section (Blue) */}
-                    <div className="lg:w-[60%] bg-brand-blue p-16 flex flex-col justify-center gap-6">
+                    <div className="lg:w-[60%] bg-brand-blue p-8 lg:p-16 flex flex-col justify-center gap-6">
                         {[
                             { label: "Pay Every Semester", value: "₹88,500" },
                             { label: "Pay Yearly", value: "₹1,77,000" },
                             { label: "Pay Total Fee", value: "₹3,54,000" },
                         ].map((fee, idx) => (
-                            <div key={idx} className="bg-white p-10 rounded-none flex justify-between items-center group hover:-translate-y-1 transition-all cursor-default shadow-lg shadow-black/5">
-                                <p className="text-gray-900 font-black text-xl tracking-tight">{fee.label}</p>
-                                <p className="text-gray-900 font-black text-3xl tracking-tighter">{fee.value}</p>
+                            <div key={idx} className="bg-white p-6 lg:p-10 rounded-none flex justify-between items-center group hover:-translate-y-1 transition-all cursor-default shadow-lg shadow-black/5">
+                                <p className="text-gray-900 font-black text-lg lg:text-xl tracking-tight">{fee.label}</p>
+                                <p className="text-gray-900 font-black text-2xl lg:text-3xl tracking-tighter">{fee.value}</p>
                             </div>
                         ))}
                     </div>
@@ -57,9 +57,9 @@ const PricingAndCertificates = () => {
                 </div>
 
                 {/* Bottom Part: Certificate Section */}
-                <div className="space-y-24 pt-16">
+                <div className="space-y-12 lg:space-y-24 pt-12 lg:pt-16">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="text-5xl lg:text-6xl font-black font-outfit text-brand-dark tracking-tight">
+                        <h2 className="text-3xl lg:text-6xl font-black font-outfit text-brand-dark tracking-tight">
                             Get an Industry Worthy Certificate
                         </h2>
                     </div>
@@ -93,8 +93,8 @@ const PricingAndCertificates = () => {
                                     </div>
 
                                     <div className="space-y-2">
-                                        <h4 className="text-2xl font-black text-brand-dark tracking-tighter">{item.title}</h4>
-                                        <p className="text-gray-500 text-xs leading-relaxed font-bold">
+                                        <h4 className="text-xl lg:text-2xl font-black text-brand-dark tracking-tighter">{item.title}</h4>
+                                        <p className="text-gray-500 text-[10px] lg:text-xs leading-relaxed font-bold">
                                             {item.desc}
                                         </p>
                                     </div>

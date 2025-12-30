@@ -1,11 +1,10 @@
 "use client";
 
-import { Award, BookOpenCheck, Users, GraduationCap, MapPin, Handshake } from "lucide-react";
 
 const ToolsAndAdvantage = () => {
     const tools = [
         { name: "TensorFlow", logo: "https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" },
-        { name: "Keras", logo: "https://www.vectorlogo.zone/logos/keras/keras-label.svg" },
+        { name: "Keras", logo: "/keras.svg" },
         { name: "Hadoop", logo: "https://www.vectorlogo.zone/logos/apache_hadoop/apache_hadoop-ar21.svg" },
         { name: "PyTorch", logo: "https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" },
         { name: "SciKit Learn", logo: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" },
@@ -16,29 +15,29 @@ const ToolsAndAdvantage = () => {
     ];
 
     const advantages = [
-        { id: "/001", title: "Prestigious M.Tech Degree", Icon: GraduationCap },
-        { id: "/002", title: "Industry-Relevant Curriculum", Icon: BookOpenCheck },
-        { id: "/003", title: "Hands-On Campus Immersion", Icon: MapPin },
-        { id: "/004", title: "Expert Faculty Guidance", Icon: Award },
-        { id: "/005", title: "Professional Networking", Icon: Users },
-        { id: "/006", title: "Strong Industry Connect", Icon: Handshake },
+        { id: "/001", title: "Prestigious M.Tech Degree" },
+        { id: "/002", title: "Industry-Relevant Curriculum" },
+        { id: "/003", title: "Hands-On Campus Immersion" },
+        { id: "/004", title: "Expert Faculty Guidance" },
+        { id: "/005", title: "Professional Networking" },
+        { id: "/006", title: "Strong Industry Connect" },
     ];
 
     return (
-        <section className="py-24 bg-white overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
+        <section className="py-16 lg:py-24 bg-white overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 lg:space-y-32">
 
                 {/* Tools Section */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
                     {/* Left Card */}
-                    <div className="lg:col-span-6 bg-brand-blue rounded-none p-16 flex flex-col justify-center text-white relative overflow-hidden">
-                        <div className="space-y-8 relative z-10">
-                            <h2 className="text-6xl md:text-7xl font-bold font-outfit leading-tight">
+                    <div className="lg:col-span-6 bg-brand-blue rounded-none p-10 lg:p-16 flex flex-col justify-center text-white relative overflow-hidden">
+                        <div className="space-y-6 lg:space-y-8 relative z-10">
+                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold font-outfit leading-tight">
                                 Tools <br />
                                 You'll <br />
-                                Master <span className="text-4xl">→</span>
+                                Master <span className="text-2xl lg:text-4xl">→</span>
                             </h2>
-                            <p className="text-white/80 text-lg md:text-xl leading-relaxed max-w-md">
+                            <p className="text-white/80 text-base md:text-xl leading-relaxed max-w-md">
                                 Gain proficiency with the industry-standard frameworks and development environments used by top AI engineering teams worldwide.
                             </p>
                         </div>
@@ -60,7 +59,7 @@ const ToolsAndAdvantage = () => {
 
                     {/* Right Grid */}
                     <div className="lg:col-span-6 flex flex-col justify-center">
-                        <div className="grid grid-cols-3 gap-4">
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                             {tools.map((tool, index) => (
                                 <div key={index} className="aspect-square flex flex-col items-center justify-center p-6 bg-white border border-gray-100 rounded-none shadow-sm hover:shadow-xl hover:scale-[1.02] transition-all cursor-default group">
                                     <div className="h-16 w-full flex items-center justify-center">
@@ -80,26 +79,25 @@ const ToolsAndAdvantage = () => {
                 </div>
 
                 {/* Advantage Section */}
-                <div className="space-y-16">
+                <div className="space-y-12 lg:space-y-16">
                     <div className="text-center space-y-4">
                         <div className="inline-block px-4 py-1.5 bg-gray-50 rounded-none text-gray-500 font-bold text-xs tracking-widest uppercase">
                             READY TO JOIN?
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-bold font-outfit text-brand-dark">
+                        <h2 className="text-3xl lg:text-5xl font-bold font-outfit text-brand-dark">
                             The IIIT Dharwad Advantage
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
                         {advantages.map((item, index) => (
-                            <div key={index} className="p-10 bg-brand-light rounded-none relative group hover:bg-white hover:shadow-xl hover:shadow-brand-blue/5 border border-transparent hover:border-brand-blue/10 transition-all">
-                                <span className="text-gray-300 font-mono text-xs absolute top-8 left-8">{item.id}</span>
-                                <div className="mt-8 space-y-6">
-                                    <item.Icon className="text-gray-200 group-hover:text-brand-dark transition-colors" size={40} strokeWidth={1.5} />
-                                    <h4 className="text-xl font-bold text-brand-dark group-hover:text-black transition-colors leading-snug">
-                                        {item.title}
-                                    </h4>
+                            <div key={index} className="flex items-center gap-4 p-6 bg-brand-light/50 border border-brand-blue/5 hover:border-brand-blue/20 hover:bg-white hover:shadow-lg transition-all rounded-none group">
+                                <div className="flex-shrink-0">
+                                    <img src="/blue-bulletin.svg" alt="bullet" className="h-6 w-6" />
                                 </div>
+                                <h4 className="text-lg font-bold text-brand-dark group-hover:text-brand-blue transition-colors leading-snug">
+                                    {item.title}
+                                </h4>
                             </div>
                         ))}
                     </div>

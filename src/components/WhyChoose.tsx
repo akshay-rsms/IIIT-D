@@ -23,17 +23,17 @@ const WhyChoose = () => {
     ];
 
     return (
-        <section className="py-24 bg-white overflow-hidden">
+        <section className="py-16 lg:py-24 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col lg:flex-row gap-16 items-center">
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
 
                     {/* Content Left */}
-                    <div className="lg:w-1/2 space-y-12">
-                        <div className="space-y-4">
-                            <h2 className="text-4xl lg:text-5xl font-bold font-outfit text-brand-dark leading-tight">
+                    <div className="lg:w-1/2 space-y-10 lg:space-y-12">
+                        <div className="space-y-4 text-center lg:text-left">
+                            <h2 className="text-3xl lg:text-5xl font-bold font-outfit text-brand-dark leading-tight">
                                 Why Choose <span className="font-bold">IIIT Dharwad?</span>
                             </h2>
-                            <p className="text-xl text-gray-600 font-medium">
+                            <p className="text-lg lg:text-xl text-gray-600 font-medium">
                                 India's Next Frontier for Data Science & AI Education
                             </p>
                         </div>
@@ -52,8 +52,8 @@ const WhyChoose = () => {
                             ))}
                         </div>
 
-                        <div className="pt-6">
-                            <button className="inline-flex items-center gap-4 bg-brand-blue text-white px-10 py-5 rounded-none font-bold text-lg group shadow-xl shadow-brand-blue/20 hover:scale-[1.02] transition-all">
+                        <div className="pt-6 flex justify-center lg:justify-start">
+                            <button className="inline-flex items-center gap-4 bg-brand-blue text-white px-8 lg:px-10 py-4 lg:py-5 rounded-none font-bold text-base lg:text-lg group shadow-xl shadow-brand-blue/20 hover:scale-[1.02] transition-all">
                                 Apply Now
                                 <span className="group-hover:translate-x-1 transition-transform">→</span>
                             </button>

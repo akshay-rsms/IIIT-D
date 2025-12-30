@@ -17,11 +17,11 @@ const FAQAndFooter = () => {
         <footer className="bg-white">
 
             {/* FAQ Section (Strict Dark Theme) */}
-            <section className="bg-[#050505] py-32 text-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
-                    <div className="space-y-6 max-w-2xl">
-                        <h2 className="text-5xl lg:text-6xl font-black font-outfit leading-tight tracking-tight">Frequently <br /> Asked Questions</h2>
-                        <p className="text-gray-600 font-bold leading-relaxed text-sm">
+            <section className="bg-[#050505] py-16 lg:py-32 text-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 lg:space-y-24">
+                    <div className="space-y-4 lg:space-y-6 max-w-2xl text-center lg:text-left">
+                        <h2 className="text-3xl lg:text-6xl font-black font-outfit leading-tight tracking-tight">Frequently <br /> Asked Questions</h2>
+                        <p className="text-gray-600 font-bold leading-relaxed text-xs lg:text-sm">
                             We’ll be there when you need us. Find quick answers to common questions about the M.Tech program.
                         </p>
                     </div>
@@ -43,9 +43,9 @@ const FAQAndFooter = () => {
                         {/* FAQ Items */}
                         <div className="lg:w-[78%] space-y-4">
                             {faqs.map((f, i) => (
-                                <div key={i} className={`bg-[#121212] rounded-none p-10 border border-white/5 space-y-8 group hover:border-gray-700/30 transition-all ${i === 0 ? 'ring-1 ring-gray-700/20 shadow-2xl shadow-gray-700/5' : ''}`}>
+                                <div key={i} className={`bg-[#121212] rounded-none p-6 lg:p-10 border border-white/5 space-y-6 lg:space-y-8 group hover:border-gray-700/30 transition-all ${i === 0 ? 'ring-1 ring-gray-700/20 shadow-2xl shadow-gray-700/5' : ''}`}>
                                     <div className="flex justify-between items-center group-hover:translate-x-1 transition-transform">
-                                        <h4 className="text-2xl font-black text-gray-300 tracking-tight">{f.q}</h4>
+                                        <h4 className="text-xl lg:text-2xl font-black text-gray-300 tracking-tight">{f.q}</h4>
                                     </div>
 
                                     {i === 0 && (
@@ -92,9 +92,9 @@ const FAQAndFooter = () => {
                         </div>
 
                         {/* Bottom Row: Newsletter */}
-                        <div className="p-12 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12">
-                            <h4 className="text-3xl font-black font-outfit text-brand-dark tracking-tighter shrink-0">Join Our Newsletter</h4>
-                            <div className="flex-grow max-w-xl w-full flex bg-white border border-gray-200 rounded-none overflow-hidden shadow-sm">
+                        <div className="p-10 lg:p-16 flex flex-col items-center justify-between gap-8 lg:gap-12">
+                            <h4 className="text-2xl lg:text-3xl font-black font-outfit text-brand-dark tracking-tighter shrink-0">Join Our Newsletter</h4>
+                            <div className="flex-grow max-w-xl w-full flex flex-col sm:flex-row bg-white border border-gray-200 rounded-none overflow-hidden shadow-sm">
                                 <input
                                     type="email"
                                     placeholder="Enter your email →"

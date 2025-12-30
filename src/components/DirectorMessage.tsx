@@ -20,15 +20,15 @@ const DirectorMessage = () => {
     ];
 
     return (
-        <section className="py-24 bg-white overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <section className="py-16 lg:py-24 bg-white overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 lg:space-y-12">
 
                 {/* Top: Message & Video Section */}
                 <div className="flex flex-col lg:flex-row border border-gray-100 rounded-none overflow-hidden shadow-sm">
                     {/* Left Side: Text */}
-                    <div className="lg:w-[40%] p-16 flex flex-col justify-between bg-white">
-                        <h2 className="text-4xl lg:text-5xl font-bold font-outfit text-brand-dark leading-tight">
-                            Message <br /> from the <br /> Director →
+                    <div className="lg:w-[40%] p-8 lg:p-16 flex flex-col justify-between bg-white text-center lg:text-left">
+                        <h2 className="text-3xl lg:text-5xl font-bold font-outfit text-brand-dark leading-tight">
+                            Message <br className="hidden lg:block" /> from the <br className="hidden lg:block" /> Director →
                         </h2>
 
                         <div className="mt-16 space-y-4">
@@ -73,9 +73,9 @@ const DirectorMessage = () => {
                 </div>
 
                 {/* Middle: Profile Card Row */}
-                <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide pt-4">
+                <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide pt-4 -mx-4 px-4 lg:mx-0 lg:px-0">
                     {profileCards.map((p, i) => (
-                        <div key={i} className="min-w-[340px] bg-[#F8FAFC] rounded-none p-8 flex justify-between items-center group hover:bg-white hover:shadow-xl hover:shadow-black/5 transition-all border border-transparent hover:border-gray-100">
+                        <div key={i} className="min-w-[280px] sm:min-w-[340px] bg-[#F8FAFC] rounded-none p-6 sm:p-8 flex justify-between items-center group hover:bg-white hover:shadow-xl hover:shadow-black/5 transition-all border border-transparent hover:border-gray-100">
                             <div className="space-y-6">
                                 <div className="space-y-1">
                                     <p className="text-2xl font-bold text-gray-900 leading-tight">Prof. <br />SR Mahadeva</p>
@@ -94,8 +94,8 @@ const DirectorMessage = () => {
                 </div>
 
                 {/* Bottom: All Students Section */}
-                <div className="pt-12 space-y-10">
-                    <h3 className="text-3xl font-bold font-outfit text-brand-dark text-center">All Students Will Recieve</h3>
+                <div className="pt-8 lg:pt-12 space-y-8 lg:space-y-10">
+                    <h3 className="text-2xl lg:text-3xl font-bold font-outfit text-brand-dark text-center">All Students Will Recieve</h3>
                     <div className="flex flex-wrap justify-center gap-4">
                         {benefits.map((benefit, i) => (
                             <div key={i} className="flex items-center gap-3 px-6 py-4 bg-white border border-gray-100 rounded-none shadow-sm hover:shadow-md hover:border-gray-200 transition-all cursor-default group">

@@ -7,9 +7,9 @@ const PedagogyAndAssessment = () => {
         <section className="bg-white overflow-hidden">
 
             {/* Split Section: Attendance vs Pedagogy */}
-            <div className="flex flex-col lg:flex-row min-h-[700px]">
+            <div className="flex flex-col lg:flex-row min-h-[600px] lg:min-h-[700px]">
                 {/* Left Section: Attendance Policy (Dark/Black) */}
-                <div className="lg:w-1/2 bg-[#0A0A0A] p-16 lg:p-24 relative flex flex-col items-center lg:items-end">
+                <div className="lg:w-1/2 bg-[#0A0A0A] p-10 lg:p-24 relative flex flex-col items-center lg:items-end">
                     <div className="max-w-md w-full space-y-16">
                         <div className="space-y-6">
                             <h2 className="text-4xl lg:text-5xl font-bold font-outfit text-white">Attendance Policy</h2>
@@ -56,9 +56,9 @@ const PedagogyAndAssessment = () => {
                 </div>
 
                 {/* Right Section: Pedagogy & Delivery (Vibrant Blue) */}
-                <div className="lg:w-1/2 bg-brand-blue p-16 lg:p-24 space-y-16 text-white relative">
-                    <div className="space-y-6">
-                        <h2 className="text-4xl lg:text-5xl font-bold font-outfit">Pedagogy & Delivery</h2>
+                <div className="lg:w-1/2 bg-brand-blue p-10 lg:p-24 space-y-12 lg:space-y-16 text-white relative">
+                    <div className="space-y-4 lg:space-y-6">
+                        <h2 className="text-3xl lg:text-5xl font-bold font-outfit">Pedagogy & Delivery</h2>
                         <p className="text-white/70 text-sm leading-relaxed max-w-sm font-medium">
                             The program follows a blended learning approach, combining multiple instructional methods to enhance learning outcomes:
                         </p>
@@ -80,13 +80,13 @@ const PedagogyAndAssessment = () => {
             </div>
 
             {/* Bottom Section: Assessment & Evaluation */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 space-y-24">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-32 space-y-16 lg:space-y-24">
 
                 {/* Header with image */}
-                <div className="flex flex-col lg:flex-row gap-20 items-center">
-                    <div className="lg:w-1/2 space-y-8">
-                        <h2 className="text-5xl lg:text-6xl font-bold font-outfit text-brand-dark leading-tight">Assessment & <br /> Evaluation</h2>
-                        <p className="text-gray-400 font-bold leading-relaxed text-sm max-w-md">
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+                    <div className="lg:w-1/2 space-y-6 lg:space-y-8 text-center lg:text-left">
+                        <h2 className="text-3xl lg:text-6xl font-bold font-outfit text-brand-dark leading-tight">Assessment & <br /> Evaluation</h2>
+                        <p className="text-gray-400 font-bold leading-relaxed text-sm max-w-md mx-auto lg:mx-0">
                             Students will be evaluated through a combination of quizzes, assignments, case studies, and end-term examinations. These diverse assessment methods ensure continuous learning and a well-rounded understanding.
                         </p>
                     </div>
@@ -111,7 +111,7 @@ const PedagogyAndAssessment = () => {
                         { step: "STEP 3", title: "If selected, you will receive the offer letter" },
                         { step: "STEP 4", title: "Pay the program fee and confirm your admission" },
                     ].map((item, idx) => (
-                        <div key={idx} className="bg-white p-12 rounded-none border border-gray-100 shadow-sm flex flex-col justify-between h-[360px] group hover:border-brand-blue/30 hover:shadow-xl hover:shadow-brand-blue/5 transition-all relative">
+                        <div key={idx} className="bg-white p-8 lg:p-12 rounded-none border border-gray-100 shadow-sm flex flex-col justify-between h-[280px] lg:h-[360px] group hover:border-brand-blue/30 hover:shadow-xl hover:shadow-brand-blue/5 transition-all relative">
                             <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-brand-blue/20 rounded-none group-hover:border-brand-blue transition-colors" />
                             <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-brand-blue/20 rounded-none group-hover:border-brand-blue transition-colors" />
 
