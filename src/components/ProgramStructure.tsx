@@ -19,10 +19,10 @@ const ProgramStructure = () => {
                 { name: "Data Science Lab", type: "Discipline Core", credits: "2 Credits" },
             ],
         },
-        { id: 1, title: "Semester 1", credits: "15 Credits", courses: [] },
-        { id: 2, title: "Semester 2", credits: "15 Credits", courses: [] },
-        { id: 3, title: "Semester 3", credits: "15 Credits", courses: [] },
-        { id: 4, title: "Semester 4", credits: "15 Credits", courses: [] },
+        { id: 1, title: "Semester 2", credits: "15 Credits", courses: [] },
+        { id: 2, title: "Semester 3", credits: "15 Credits", courses: [] },
+        { id: 3, title: "Semester 4", credits: "15 Credits", courses: [] },
+        { id: 4, title: "Semester 5", credits: "15 Credits", courses: [] },
     ];
 
     return (
@@ -57,16 +57,20 @@ const ProgramStructure = () => {
 
                 <div className="space-y-4">
                     {semesters.map((sem, index) => (
-                        <div key={index} className="bg-white rounded-none overflow-hidden border border-gray-100 shadow-sm">
+                        <div key={index} className="bg-white rounded-none overflow-hidden border-b border-gray-100">
                             <button
                                 onClick={() => setOpenSemester(openSemester === index ? null : index)}
-                                className="w-full px-6 lg:px-8 py-4 lg:py-6 flex justify-between items-center hover:bg-gray-50/50 transition-colors"
+                                className="w-full px-6 lg:px-8 py-6 lg:py-8 flex justify-between items-center hover:bg-gray-50/50 transition-colors group"
                             >
                                 <div className="flex items-center gap-4 lg:gap-6">
-                                    <span className="text-lg lg:text-2xl font-bold text-brand-dark font-outfit">{sem.title}</span>
-                                    <span className="text-xs lg:text-base text-gray-400 font-medium">{sem.credits}</span>
+                                    <span className="text-xl lg:text-3xl font-medium text-gray-900">{sem.title}</span>
                                 </div>
-                                {openSemester === index ? <ChevronUp className="text-brand-dark" /> : <ChevronDown className="text-gray-300" />}
+                                <div className="flex items-center gap-4">
+                                    <span className="text-sm lg:text-base text-gray-500 font-medium font-m-plus-1-code">{sem.credits}</span>
+                                    <div className={`transition-transform duration-300 ${openSemester === index ? 'rotate-180 text-brand-blue' : 'text-brand-blue'}`}>
+                                        <div className={`w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] ${openSemester === index ? 'border-b-brand-blue' : 'border-b-brand-blue rotate-180'}`} />
+                                    </div>
+                                </div>
                             </button>
 
                             <AnimatePresence>
@@ -75,29 +79,33 @@ const ProgramStructure = () => {
                                         initial={{ height: 0, opacity: 0 }}
                                         animate={{ height: "auto", opacity: 1 }}
                                         exit={{ height: 0, opacity: 0 }}
-                                        className="overflow-hidden border-t border-gray-50"
+                                        className="overflow-hidden bg-gray-50/50"
                                     >
-                                        <div className="p-8 space-y-6">
+                                        <div className="p-8 lg:p-12">
                                             {sem.courses.length > 0 ? (
                                                 <div className="overflow-x-auto">
-                                                    <table className="w-full text-left">
+                                                    <table className="w-full text-left border-collapse">
                                                         <thead>
-                                                            <tr className="text-xs text-gray-400 font-bold uppercase tracking-wider">
-                                                                <th className="pb-4">Course</th>
-                                                                <th className="pb-4">Type</th>
-                                                                <th className="pb-4">Credits</th>
+                                                            <tr className="text-[10px] text-gray-400 font-bold uppercase tracking-wider border-b border-transparent">
+                                                                <th className="pb-2 w-[60%] font-normal">Course</th>
+                                                                <th className="pb-2 w-[20%] font-normal">Type</th>
+                                                                <th className="pb-2 w-[20%] font-normal">Credits</th>
                                                             </tr>
                                                         </thead>
-                                                        <tbody className="divide-y divide-gray-100">
+                                                        <tbody>
                                                             {sem.courses.map((course, cIdx) => (
-                                                                <tr key={cIdx} className="group">
-                                                                    <td className="py-5 font-bold text-brand-dark group-hover:text-gray-800 transition-colors">{course.name}</td>
-                                                                    <td className="py-5">
-                                                                        <span className="bg-gray-100 text-gray-600 text-[8px] lg:text-[10px] font-bold px-3 py-1 rounded-none uppercase">
+                                                                <tr key={cIdx} className="group border-b border-dashed border-gray-200 last:border-0">
+                                                                    <td className="py-6 font-medium text-gray-800 text-sm lg:text-base pr-4">{course.name}</td>
+                                                                    <td className="py-6 align-middle">
+                                                                        <span className="bg-brand-blue text-white text-[10px] font-medium px-3 py-1.5 rounded-sm whitespace-nowrap inline-block">
                                                                             {course.type}
                                                                         </span>
                                                                     </td>
-                                                                    <td className="py-5 text-gray-900 font-bold">{course.credits}</td>
+                                                                    <td className="py-6 align-middle">
+                                                                        <span className="font-m-plus-1-code text-sm lg:text-base text-gray-800 border-b border-gray-800 leading-tight inline-block">
+                                                                            {course.credits}
+                                                                        </span>
+                                                                    </td>
                                                                 </tr>
                                                             ))}
                                                         </tbody>

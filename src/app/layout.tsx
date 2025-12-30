@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Outfit, Inter } from "next/font/google";
+import { Work_Sans, M_PLUS_1_Code } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const workSans = Work_Sans({
+  variable: "--font-work-sans",
   subsets: ["latin"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const mPlus1Code = M_PLUS_1_Code({
+  variable: "--font-m-plus-1-code",
   subsets: ["latin"],
 });
 
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${outfit.variable} ${inter.variable} antialiased font-inter`}
+        className={`${workSans.variable} ${mPlus1Code.variable} antialiased font-work-sans`}
       >
         {children}
       </body>
