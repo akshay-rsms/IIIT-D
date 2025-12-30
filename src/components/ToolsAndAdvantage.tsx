@@ -30,31 +30,47 @@ const ToolsAndAdvantage = () => {
                 {/* Tools Section */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
                     {/* Left Card */}
-                    <div className="lg:col-span-6 bg-brand-blue rounded-none p-10 lg:p-16 flex flex-col justify-center text-white relative overflow-hidden">
-                        <div className="space-y-6 lg:space-y-8 relative z-10">
-                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold font-outfit leading-tight">
+                    <div className="lg:col-span-6 bg-brand-blue rounded-none p-10 lg:p-16 flex flex-col justify-center text-white relative overflow-hidden min-h-[500px]">
+
+                        {/* Background XXXX Pattern */}
+                        <div className="absolute top-0 left-0 w-full h-full opacity-[0.05] pointer-events-none overflow-hidden">
+                            <div className="grid grid-cols-4 gap-8 p-8 transform -rotate-12 scale-150">
+                                {[...Array(40)].map((_, i) => (
+                                    <div key={i} className="text-white text-2xl font-mono tracking-[0.5em] font-bold">XXXX</div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Content */}
+                        <div className="space-y-6 lg:space-y-8 relative z-10 flex flex-col items-center text-center">
+                            <h2 className="text-5xl md:text-6xl lg:text-8xl font-bold font-outfit leading-[0.9] tracking-tight">
                                 Tools <br />
                                 You'll <br />
-                                Master <span className="text-2xl lg:text-4xl">→</span>
+                                Master <span className="inline-block transform translate-y-2 ml-4">→</span>
                             </h2>
-                            <p className="text-white/80 text-base md:text-xl leading-relaxed max-w-md">
+                            <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-sm font-medium">
                                 Gain proficiency with the industry-standard frameworks and development environments used by top AI engineering teams worldwide.
                             </p>
                         </div>
 
-                        {/* Floating Decorative Elements */}
-                        <div className="absolute top-0 right-0 p-8 transform translate-x-1/4 -translate-y-1/4">
-                            <div className="bg-white p-6 rounded-full shadow-2xl animate-pulse">
-                                <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" className="h-10 w-10" alt="" />
+                        {/* Floating Cutout Icons */}
+
+                        {/* Top Right - TensorFlow */}
+                        <div className="absolute -top-6 -right-6 w-32 h-32 bg-white rounded-full flex items-center justify-center p-6 shadow-2xl z-20">
+                            <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" className="h-12 w-12 mt-4 mr-4" alt="TF" />
+                        </div>
+
+                        {/* Bottom Left - PyTorch/Flame (Using PyTorch for now as per plan, though ref image had flame) */}
+                        <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-white rounded-full flex items-center justify-center p-6 shadow-2xl z-20">
+                            <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" className="h-12 w-12 mb-4 ml-4" alt="PyTorch" />
+                        </div>
+
+                        {/* Bottom Right - Git */}
+                        <div className="absolute -bottom-10 -right-6 w-40 h-40 bg-white rounded-full flex items-center justify-center p-8 shadow-2xl z-20">
+                            <div className="w-full h-full flex items-center justify-center -mt-4 -ml-4">
+                                <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" className="h-14 w-14" alt="Git" />
                             </div>
                         </div>
-                        <div className="absolute bottom-0 left-1/4 p-8 transform -translate-x-1/2 translate-y-1/2">
-                            <div className="bg-white p-5 rounded-full shadow-2xl">
-                                <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" className="h-8 w-8" alt="" />
-                            </div>
-                        </div>
-                        <div className="absolute top-1/2 right-10 w-2 h-2 bg-white/20 rounded-full" />
-                        <div className="absolute top-1/4 left-10 w-3 h-3 bg-white/10 rounded-full" />
                     </div>
 
                     {/* Right Grid */}

@@ -44,10 +44,7 @@ const WhyChoose = () => {
                     <div className="lg:w-1/2 w-full">
                         <div className="relative rounded-none overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.15)] aspect-[4/3]">
                             <img src="/assets/why-choose.png" alt="Expert at IIIT" className="w-full h-full object-cover" />
-                            {/* Badge */}
-                            <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 w-24 h-24 bg-brand-blue rounded-full flex items-center justify-center text-white font-bold shadow-2xl z-10">
-                                <span className="text-2xl">IIIT</span>
-                            </div>
+
                             <div className="absolute inset-0 border-[16px] border-white/10 rounded-none pointer-events-none" />
                         </div>
                     </div>
