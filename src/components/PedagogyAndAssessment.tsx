@@ -85,8 +85,11 @@ const PedagogyAndAssessment = () => {
                 {/* Header with image */}
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
                     <div className="lg:w-1/2 space-y-6 lg:space-y-8 text-center lg:text-left">
-                        <h2 className="text-3xl lg:text-6xl font-bold font-outfit text-brand-dark leading-tight">Assessment & <br /> Evaluation</h2>
-                        <p className="text-gray-400 font-bold leading-relaxed text-sm max-w-md mx-auto lg:mx-0">
+                        <h2 className="text-4xl lg:text-7xl font-outfit text-brand-dark leading-none tracking-tight">
+                            Assessment & <br />
+                            <span className="font-bold">Evaluation</span>
+                        </h2>
+                        <p className="text-[22px] lg:text-[24px] font-normal font-work-sans text-brand-dark leading-snug">
                             Students will be evaluated through a combination of quizzes, assignments, case studies, and end-term examinations. These diverse assessment methods ensure continuous learning and a well-rounded understanding.
                         </p>
                     </div>
